@@ -4635,7 +4635,7 @@ static PyObject *get_unique_type(CTypeDescrObject *x,
     /* the 'value' in unique_cache doesn't count as 1, but don't use
        Py_DECREF(x) here because it will confuse debug builds into thinking
        there was an extra DECREF in total. */
-    ((PyObject *)x)->ob_refcnt--;
+    // ((PyObject *)x)->ob_refcnt--;
     return (PyObject *)x;
 
  error:
